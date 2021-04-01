@@ -20,19 +20,19 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  TgFN  |  | TgNum |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | SPACE|  ENTER |  | ENTER | SPACE| CTRL  | ALT   | MENU |
             bindings = <
-&kp ESC   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6      &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
-&kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y       &kp U     &kp I     &kp O    &kp P    &kp BSPC
-&kp CAPS  &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H       &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B       &tog 3     &tog 4    &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &kp LGUI &kp LALT &kp LCTRL &lt 1 SPACE &lt 2 RET  &lt 2 RET &lt 1 SPACE &kp RCTRL &kp RALT  &lt 4 K_APP 
+&kp ESC    &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6      &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
+&kp TAB    &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y       &kp U     &kp I     &kp O    &kp P    &kp BSPC
+&lt 3 CAPS &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H       &kp J     &kp K     &kp L    &kp SEMI &lt 3 SQT
+&kp LSHFT  &kp Z  &kp X    &kp C    &kp V     &kp B       &tog 3     &tog 4    &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &kp LGUI &mt LALT UP &mt LCTRL DOWN &lt 1 SPACE &lt 2 RET  &lt 2 RET &lt 1 SPACE &mt RCTRL LEFT &mt RALT RIGHT &lt 4 K_APP 
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
         
         nav1_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  End |       |       |      |  Home |  Ins  |
+// |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  END |       |       |      |  HOME |  Ins  |
 // |  ~   |      |NexWd|      | HOME | PGUP |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
 // |      |      |     |      | END  | PGDN |                   |  <-  |   v   |   ^   |  ->  | Del_PW| Del_NW|
 // |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
@@ -45,25 +45,26 @@
                      &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
         
         nav2_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  End |       |       |      |  Home |  Ins  |
-// |  ~   |      |NexWd|      | HOME | PGUP |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
-// |      |      |     |      | END  | PGDN |                   |PrevWd|  HOME |  END  |NextWd| Sft_HM|Sft_End|
+// |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  END |       |       |      |  HOME |  Ins  |
+// |  ~   |      |NexWd|      |Sft+HM|S+C+HM|                   |   {  |   }   |   (   |   )  |   [   |   ]   |
+// |      |      |     |      |Sft+ED|S+C+ED|                   |PrevWd|  HOME |  END  |NextWd| Sft+PW|Sft+NW |
 // |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END      &trans   &trans    &trans        &kp HOME     &kp INS
-&kp TILDE &trans     &kp LC(RIGHT) &trans      &kp HOME          &kp PG_UP                    &kp LBRC     &kp RBRC &kp LPAR  &kp RPAR      &kp LBKT     &kp RBKT
-&trans    &trans     &trans        &trans      &kp END           &kp PG_DN                    &kp LC(LEFT) &kp HOME &kp END   &kp LC(RIGHT) &kp LS(HOME) &kp LS(END)
-&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp EQUAL    &kp PLUS &kp MINUS &kp UNDER     &kp BSLH     &kp PIPE
-                     &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
+&kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END      &trans   &trans    &trans        &kp HOME         &kp INS
+&kp TILDE &trans     &kp LC(RIGHT) &trans      &kp LS(HOME)      &kp LS(LC(HOME))             &kp LBRC     &kp RBRC &kp LPAR  &kp RPAR      &kp LBKT         &kp RBKT
+&trans    &trans     &trans        &trans      &kp LS(END)       &kp LS(LC(END))              &kp LC(LEFT) &kp HOME &kp END   &kp LC(RIGHT) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT))
+&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp EQUAL    &kp PLUS &kp MINUS &kp UNDER     &kp BSLH         &kp PIPE
+                     &trans        &trans      &trans            &trans       &trans   &trans &trans       
+                     &trans   &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         fn_layer {
