@@ -23,7 +23,7 @@
 &kp ESC   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6      &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y       &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp CAPS  &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H       &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B       &tog 1     &tog 1    &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B       &tog 3     &tog 4    &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                  &kp LGUI &kp LALT &kp LCTRL &lt 1 SPACE &lt 2 RET  &lt 2 RET &lt 1 SPACE &kp RCTRL &kp RALT  &kp K_APP
             >;
 
@@ -41,7 +41,7 @@
 &kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END   &trans   &trans    &trans    &kp HOME     &kp INS
 &kp TILDE &trans     &kp LC(RIGHT) &trans      &trans            &trans                       &kp LBRC  &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT     &kp RBKT
 &trans    &trans     &trans        &trans      &trans            &trans                       &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp LC(BSPC) &kp LC(DEL)
-&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 1   &tog 1 &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp BSLH     &kp PIPE
+&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp BSLH     &kp PIPE
                      &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
             >;
 
@@ -59,7 +59,7 @@
 &kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END      &trans   &trans    &trans        &kp HOME  &kp INS
 &kp TILDE &trans     &kp LC(RIGHT) &trans      &trans            &trans                       &kp LBRC     &kp RBRC &kp LPAR  &kp RPAR      &kp LBKT  &kp RBKT
 &trans    &trans     &trans        &trans      &trans            &trans                       &kp LC(LEFT) &kp HOME &kp END   &kp LC(RIGHT) &kp TILDE &kp GRAVE
-&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 1   &tog 1 &kp EQUAL    &kp PLUS &kp MINUS &kp UNDER     &kp BSLH  &kp PIPE
+&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp EQUAL    &kp PLUS &kp MINUS &kp UNDER     &kp BSLH  &kp PIPE
                      &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
             >;
 
@@ -96,7 +96,7 @@
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &kp KP_N7    &kp KP_N8   &kp KP_N9  &kp KP_MINUS    &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &kp KP_N4    &kp KP_N5   &kp KP_N6  &kp KP_PLUS     &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp KP_N1    &kp KP_N2   &kp KP_N3  &kp KP_MULTIPLY &trans
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &tog 1   &tog 1  &trans    &kp KP_N0    &kp KP_N0   &kp KP_DOT &kp KP_DIVIDE   &trans
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &tog 3   &tog 4  &trans    &kp KP_N0    &kp KP_N0   &kp KP_DOT &kp KP_DIVIDE   &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
 
