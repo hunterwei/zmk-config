@@ -27,7 +27,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &lt 1 SPACE &lt 2 RET  &lt 2 RET &lt 1 SPACE &kp RCTRL &kp RALT  &lt 4 K_APP 
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
         
         nav1_layer {
