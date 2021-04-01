@@ -27,7 +27,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &lt 1 SPACE &lt 2 RET  &lt 2 RET &lt 1 SPACE &kp RCTRL &kp RALT  &kp K_APP
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
         fn_layer {
