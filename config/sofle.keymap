@@ -33,14 +33,14 @@
         nav1_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  End |       |       |      |  Home |  Ins  |
-// |  ~   |      |NexWd|      |      |      |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
-// |      |      |     |      |      |      |                   |  <-  |   v   |   ^   |  ->  | Del_PW| Del_NW|
+// |  ~   |      |NexWd|      | HOME | PGUP |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
+// |      |      |     |      | END  | PGDN |                   |  <-  |   v   |   ^   |  ->  | Del_PW| Del_NW|
 // |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END   &trans   &trans    &trans    &kp HOME     &kp INS
-&kp TILDE &trans     &kp LC(RIGHT) &trans      &trans            &trans                       &kp LBRC  &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT     &kp RBKT
-&trans    &trans     &trans        &trans      &trans            &trans                       &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp LC(BSPC) &kp LC(DEL)
+&kp TILDE &trans     &kp LC(RIGHT) &trans      &kp HOME          &kp PG_UP                    &kp LBRC  &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT     &kp RBKT
+&trans    &trans     &trans        &trans      &kp END           &kp PG_DN                    &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp LC(BSPC) &kp LC(DEL)
 &trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp BSLH     &kp PIPE
                      &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
             >;
@@ -51,14 +51,14 @@
         nav2_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  End |       |       |      |  Home |  Ins  |
-// |  ~   |      |NexWd|      |      |      |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
-// |      |      |     |      |      |      |                   |PrevWd|  HOME |  END  |NextWd| Sft_HM|Sft_End|
+// |  ~   |      |NexWd|      | HOME | PGUP |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
+// |      |      |     |      | END  | PGDN |                   |PrevWd|  HOME |  END  |NextWd| Sft_HM|Sft_End|
 // |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END      &trans   &trans    &trans        &kp HOME     &kp INS
-&kp TILDE &trans     &kp LC(RIGHT) &trans      &trans            &trans                       &kp LBRC     &kp RBRC &kp LPAR  &kp RPAR      &kp LBKT     &kp RBKT
-&trans    &trans     &trans        &trans      &trans            &trans                       &kp LC(LEFT) &kp HOME &kp END   &kp LC(RIGHT) &kp LS(HOME) &kp LS(END)
+&kp TILDE &trans     &kp LC(RIGHT) &trans      &kp HOME          &kp PG_UP                    &kp LBRC     &kp RBRC &kp LPAR  &kp RPAR      &kp LBKT     &kp RBKT
+&trans    &trans     &trans        &trans      &kp END           &kp PG_DN                    &kp LC(LEFT) &kp HOME &kp END   &kp LC(RIGHT) &kp LS(HOME) &kp LS(END)
 &trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp EQUAL    &kp PLUS &kp MINUS &kp UNDER     &kp BSLH     &kp PIPE
                      &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
             >;
@@ -77,7 +77,7 @@
             bindings = <
 &kp GRAVE &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
 &kp TILDE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
-&trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp PIPE
+&trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &PIPE
 &trans    &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC  &tog 3   &tog 4 &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH  &trans
                     &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
             >;
@@ -87,16 +87,16 @@
         
         numpad_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |   7  |   8   |  9   |   -   |  DEL  |
+// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |  ESC |   7  |   8   |  9   |   -   |  DEL  |
 // |     | INS  | PSCR | GUI   |       |      |                | PGUP |   4  |   5   |  6   |   +   | BKSPC |
 // |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   1  |   2   |  3   |   *   | ENTER |
 // |     | UNDO | CUT  | COPY  | PASTE |      | TgFn |  |TgNum |      |   0  |   0   |  .   |   /   | ENTER |
 //              |      |       |       |      |      |  |      |SPACE |      |       |      |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &kp N7    &kp N8   &kp N9  &kp KP_MINUS    &trans
-&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &kp N4    &kp N5   &kp N6  &kp KP_PLUS     &trans
-&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp N1    &kp N2   &kp N3  &kp KP_MULTIPLY &trans
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &tog 3   &tog 4  &trans    &kp N0    &kp N0   &kp DOT &kp KP_DIVIDE   &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &kp ESC   &kp N7    &kp N8   &kp N9  &kp KP_MINUS    &kp DEL
+&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &kp N4    &kp N5   &kp N6  &kp KP_PLUS     &kp BSPC
+&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp N1    &kp N2   &kp N3  &kp KP_MULTIPLY &kp RET
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &tog 3   &tog 4  &trans    &kp N0    &kp N0   &kp DOT &kp KP_DIVIDE   &kp RET
                         &trans       &trans       &trans       &trans  &trans   &trans  &kp SPACE &trans    &trans   &trans
             >;
 
