@@ -30,24 +30,6 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN &inc_dec_kp PG_DN PG_UP>;
         };
 
-        nav1_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  End |       |       |      |  Home |  Ins  |
-// |  ~   |      |NexWd|      |      |      |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
-// |      |      |     |      |      |      |                   |  <-  |   v   |   ^   |  ->  | Del_PW| Del_NW|
-// |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
-//               |     |      |      |      |        |  |       |      |       |       |      |
-            bindings = <
-&kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END   &trans   &trans    &trans    &kp HOME     &kp INS
-&kp TILDE &trans     &kp LC(RIGHT) &trans      &trans            &trans                       &kp LBRC  &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT     &kp RBKT
-&trans    &trans     &trans        &trans      &trans            &trans                       &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp LC(BSPC) &kp LC(DEL)
-&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 1   &tog 2 &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp BSLH     &kp PIPE
-                     &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
-        };
-
         fn_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
@@ -62,6 +44,24 @@
 &trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp PIPE
 &trans    &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC  &tog 1   &tog 2 &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH  &trans
                     &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+        };
+
+        numpad_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |   7  |   8   |  9   |   -   |       |
+// |     | INS  | PSCR | GUI   |       |      |                | PGUP |   4  |   5   |  6   |   +   |       |
+// |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   1  |   2   |  3   |   *   |       |
+// |     | UNDO | CUT  | COPY  | PASTE |      | TgFn|  |TgNum |      |   0  |   0   |  .   |   /   |       |
+//              |      |       |       |      |      |  |      |      |      |       |      |
+            bindings = <
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &kp KP_N7    &kp KP_N8   &kn KP_N9  &kp KP_MINUS    &trans
+&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &kp KP_N4    &kp KP_N5   &kp KP_N6  &kp KP_PLUS     &trans
+&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp KP_N1    &kp KP_N2   &kp KP_N3  &kp KP_MULTIPLY &trans
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &tog 3   &tog 4  &trans    &kp KP_N0    &kp KP_N0   &KP_DOT    &kp KP_DIVIDE   &trans
+                        &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
