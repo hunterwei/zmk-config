@@ -29,6 +29,42 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
         };
+        
+        nav1_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  End |       |       |      |  Home |  Ins  |
+// |  ~   |      |NexWd|      |      |      |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
+// |      |      |     |      |      |      |                   |  <-  |   v   |   ^   |  ->  | Del_PW| Del_NW|
+// |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
+//               |     |      |      |      |        |  |       |      |       |       |      |
+            bindings = <
+&kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END   &trans   &trans    &trans    &kp HOME     &kp INS
+&kp TILDE &trans     &kp LC(RIGHT) &trans      &trans            &trans                       &kp LBRC  &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT     &kp RBKT
+&trans    &trans     &trans        &trans      &trans            &trans                       &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp LC(BSPC) &kp LC(DEL)
+&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 1   &tog 1 &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp BSLH     &kp PIPE
+                     &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+        };
+        
+        nav2_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  End |       |       |      |  Home |  Ins  |
+// |  ~   |      |NexWd|      |      |      |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
+// |      |      |     |      |      |      |                   |PrevWd|  HOME |  END  |NextWd|   ~   |   `   |
+// |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
+//               |     |      |      |      |        |  |       |      |       |       |      |
+            bindings = <
+&kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END      &trans   &trans    &trans        &kp HOME  &kp INS
+&kp TILDE &trans     &kp LC(RIGHT) &trans      &trans            &trans                       &kp LBRC     &kp RBRC &kp LPAR  &kp RPAR      &kp LBKT  &kp RBKT
+&trans    &trans     &trans        &trans      &trans            &trans                       &kp LC(LEFT) &kp HOME &kp END   &kp LC(RIGHT) &kp TILDE &kp GRAVE
+&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 1   &tog 1 &kp EQUAL    &kp PLUS &kp MINUS &kp UNDER     &kp BSLH  &kp PIPE
+                     &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
+        };
 
         fn_layer {
 // TODO: Some binds are waiting for shifted keycode support.
