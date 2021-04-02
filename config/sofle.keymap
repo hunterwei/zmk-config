@@ -40,7 +40,7 @@
             bindings = <
 &kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END   &trans    &trans   &trans    &kp HOME &kp INS
 &kp TILDE &trans     &kp LC(RIGHT) &trans      &kp HOME          &kp PG_UP                    &kp LBRC  &kp RBRC  &kp LPAR &kp RPAR  &kp LBKT &kp RBKT
-&trans    &trans     &trans        &trans      &kp END           &kp PG_DN                    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp DQT  &kp SQ
+&trans    &trans     &trans        &trans      &kp END           &kp PG_DN                    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp DQT  &kp SQT
 &trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp UNDER &kp MINUS &kp PLUS &kp EQUAL &kp BSLH &kp PIPE
                      &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
             >;
