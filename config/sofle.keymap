@@ -16,15 +16,15 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  CAPS |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// |  CAPS |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | ENTER |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  TgFN  |  | TgNum |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | SPACE|  ENTER |  | ENTER | SPACE| CTRL  | ALT   | MENU |
+//               | GUI | ALT  | CTRL | SPACE|  SPACE |  | SPACE | SPACE| CTRL  | ALT   | MENU |
             bindings = <
 &kp ESC    &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6      &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
 &kp TAB    &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y       &kp U     &kp I     &kp O    &kp P    &kp BSPC
-&lt 3 CAPS &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H       &kp J     &kp K     &kp L    &kp SEMI &lt 3 SQT
-&kp LSHFT  &kp Z  &kp X    &kp C    &kp V     &kp B       &tog 3     &tog 4    &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
-        &kp LGUI &mt LALT UP &mt LCTRL DOWN &lt 1 SPACE &lt 2 RET  &lt 2 RET &lt 1 SPACE &mt RCTRL LEFT &mt RALT RIGHT &lt 4 K_APP 
+&lt 3 CAPS &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H       &kp J     &kp K     &kp L    &kp SEMI &lt 3 RET
+&kp LSHFT  &kp Z  &kp X    &kp C    &kp V     &kp B       &tog 3     &tog 4    &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &kp LGUI &mt LALT UP &mt LCTRL DOWN &lt 2 SPACE &lt 1 SPACE  &lt 1 SPACE &lt 2 SPACE &mt RCTRL LEFT &mt RALT RIGHT &lt 4 K_APP 
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -34,14 +34,14 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  `   |Alt+F1|     |      |Ctl+F4|      |                   |  END |       |       |      |  HOME |  Ins  |
 // |  ~   |      |NexWd|      | HOME | PGUP |                   |   {  |   }   |   (   |   )  |   [   |   ]   |
-// |      |      |     |      | END  | PGDN |                   |  <-  |   v   |   ^   |  ->  | Del_PW| Del_NW|
-// |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   =  |   +   |   -   |  _   |   \   |   |   |
+// |      |      |     |      | END  | PGDN |                   |  <-  |   v   |   ^   |  ->  |   "   |   '   |
+// |      |      |     |Ctrl+C|CAS+V |PrevWd|  TgFN  |  | TgNum |   _  |   -   |   +   |  =   |   \   |   |   |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END   &trans   &trans    &trans    &kp HOME     &kp INS
-&kp TILDE &trans     &kp LC(RIGHT) &trans      &kp HOME          &kp PG_UP                    &kp LBRC  &kp RBRC &kp LPAR  &kp RPAR  &kp LBKT     &kp RBKT
-&trans    &trans     &trans        &trans      &kp END           &kp PG_DN                    &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp LC(BSPC) &kp LC(DEL)
-&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp BSLH     &kp PIPE
+&kp GRAVE &kp LA(F1) &trans        &trans      &kp LC(F4)        &trans                       &kp END   &trans    &trans   &trans    &kp HOME &kp INS
+&kp TILDE &trans     &kp LC(RIGHT) &trans      &kp HOME          &kp PG_UP                    &kp LBRC  &kp RBRC  &kp LPAR &kp RPAR  &kp LBKT &kp RBKT
+&trans    &trans     &trans        &trans      &kp END           &kp PG_DN                    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp DQT  &kp SQ
+&trans    &trans     &trans        &kp LC(C)   &kp LC(LA(LS(V))) &kp LC(LEFT) &tog 3   &tog 4 &kp UNDER &kp MINUS &kp PLUS &kp EQUAL &kp BSLH &kp PIPE
                      &trans        &trans      &trans            &trans       &trans   &trans &trans    &trans   &trans    &trans
             >;
 
